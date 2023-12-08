@@ -27,7 +27,7 @@ function Home() {
                 };
 
 
-                axios.post("http://127.0.0.1:5000/predict",requestData, {
+                axios.post(process.env.FLASK_URL,requestData, {
                     withCredentials: true,
                 })
                     .then((response) => {
